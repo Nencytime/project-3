@@ -1,17 +1,26 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
+  justify-content: center;
+
+  font-family: $ff-roboto;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 600px;
 
   color: $color-default-white;
+  text-transform: uppercase;
+  text-align: center;
 
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: $color-transparent;
+  border: 4px solid $color-default-white;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--gradient {
+    background: $gradient-button;
   }
 
   &:disabled {

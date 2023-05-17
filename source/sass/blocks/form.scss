@@ -1,0 +1,111 @@
+.form {
+  padding-top: 56px;
+  padding-bottom: 66px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    background-color: $color-sapphire;
+    padding: 63px 88px 68px;
+  }
+
+  @include vp-767 {
+    padding: 63px 0 68px;
+    height: 50%;
+    width: 100%;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0 0 5px;
+    font-family: $ff-alumni;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      text-align: start;
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 700;
+      margin: 0 0 22px;
+    }
+
+    @include vp-767 {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 25px;
+    }
+  }
+}
+
+.form__container {
+  margin-right: 65px;
+
+  @include vp-1199 {
+    margin-right: 30px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+}
+
+.form__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  @include vp-1199 {
+    gap: 60px;
+    margin-bottom: 28px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 23px;
+    margin-bottom: 39px;
+  }
+}
+
+.form__field {
+  input {
+    background-color: $color-transparent;
+    border: none;
+    border-bottom: 1px solid $color-light-slate-grey;
+    padding: 15px 15px 5px 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-default-white;
+
+    &::placeholder {
+      color: $color-default-white;
+    }
+  }
+}
+
+.form__button {
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  padding: 16px;
+}
+
+.form-contacts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  background: $gradient-background;
+
+  @include vp-1199 {
+    display: block;
+    background: none;
+  }
+}

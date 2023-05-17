@@ -1,0 +1,245 @@
+.advantages {
+  padding-top: 97px;
+  padding-bottom: 135px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 92px;
+    padding-bottom: 93px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-bottom: 62px;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0 0 52px 10px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 0 42px -22px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 42px -17px;
+    }
+  }
+}
+
+.advantages__list {
+  position: relative;
+  padding: 0;
+  margin: 0 60px 0 80px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto 240px auto;
+  gap: 155px 60px;
+
+  @include vp-1199 {
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 43px 29px;
+  }
+
+  @include vp-767 {
+    gap: 33px 29px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.advantages__item {
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &--special {
+    background-color: $color-resolution-blue;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    position: relative;
+    z-index: 3;
+    color: $color-default-white;
+    padding: 37px 34px 59px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: -170%;
+      width: 145%;
+      height: 2px;
+      background-color: rgba($color-crimson, 0.2);
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: -170%;
+      width: 145%;
+      height: 2px;
+      background-color: rgba($color-crimson, 0.2);
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
+
+    @include vp-1199 {
+      grid-column: 1 / 3;
+      grid-row: 2 / 4;
+      padding: 33px 118px 37px;
+      margin: 0 118px;
+    }
+
+    @include vp-767 {
+      padding: 43px 20px 42px;
+      margin: 10px -15px 8px;
+    }
+
+    h3 {
+      padding: 0;
+      margin: 0 0 -10px -6px;
+      font-weight: 700;
+      font-size: 74px;
+      line-height: 150%;
+
+      @include vp-1199 {
+        line-height: 100%;
+        margin: 0 0 0 -6px;
+      }
+
+      @include vp-767 {
+        line-height: 85%;
+        margin: 0 0 0 -3px;
+      }
+    }
+
+    span {
+      margin: 0 0 40px -3px;
+      font-weight: 700;
+      font-size: 26px;
+
+      @include vp-1199 {
+        font-size: 22px;
+        line-height: 150%;
+        margin: 0 0 13px;
+      }
+
+      @include vp-767 {
+        margin: 0 0 10px;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+
+      @include vp-767 {
+        margin: 0 35px;
+      }
+    }
+  }
+}
+
+.advantages__number {
+  margin: 0;
+
+  @include vp-767 {
+    margin: 0 0 6px;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 71px;
+    line-height: 78%;
+    background-image: $gradient-number;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include vp-1199 {
+      font-size: 58px;
+      margin: 7px 0 0;
+    }
+
+    @include vp-767 {
+      margin: 7px 100px 0;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    color: $color-persian-blue;
+  }
+}
+
+.advantages__text {
+  color: $color-sapphire;
+  margin-left: 30px;
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0 0 10px;
+    font-weight: 700;
+    font-size: 22px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 150%;
+      margin: 0 0 2px;
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+
+    @include vp-1199 {
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    @include vp-767 {
+      margin: 0 31px;
+    }
+  }
+}

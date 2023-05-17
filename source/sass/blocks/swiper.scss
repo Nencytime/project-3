@@ -1,0 +1,168 @@
+.swiper-wrapper {
+  position: relative;
+
+  &.swiper-wrapper--coaches {
+    display: flex;
+  }
+}
+
+.swiper-container {
+  position: relative;
+  padding: 0 60px;
+
+  &--coaches {
+    width: calc(100% + 120px);
+    margin: 0 0 0 -60px;
+
+    @include vp-1199 {
+      width: 100%;
+      margin: 0;
+      padding: 0 63px;
+    }
+
+    @include vp-767 {
+      padding: 0 26px;
+    }
+  }
+
+  &--reviews {
+    width: 48.4%;
+    padding: 0;
+
+    @include vp-1199 {
+      width: 83.2%;
+    }
+
+    @include vp-767 {
+      width: 78.2%;
+    }
+  }
+
+  .swiper-slide {
+    min-height: 294px;
+    min-width: 260px;
+    width: calc((100% - 120px) / 4);
+
+    @include vp-1279 {
+      width: calc((100% - 120px) / 3);
+    }
+
+    @include vp-1199 {
+      width: 268px;
+    }
+
+    @include vp-767 {
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    &--reviews {
+      width: 100%;
+      min-height: 80px;
+
+      @include vp-767 {
+        min-width: 226px;
+        min-height: 335px;
+      }
+    }
+  }
+}
+
+.swiper-navigation {
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 22px;
+
+    width: 24px;
+    height: 100%;
+
+    color: $color-dark-gray;
+
+    background-color: $color-default-white;
+    border: none;
+
+    @include vp-1199 {
+      width: 70px;
+    }
+
+    @include vp-767 {
+      width: 50px;
+    }
+
+    &::after {
+      font-size: 30px;
+
+      @include vp-767 {
+        font-size: 24px;
+      }
+    }
+
+    &--reviews {
+      background-color: $color-transparent;
+      width: 40px;
+
+      @include vp-767 {
+        width: 35px;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    &--coaches {
+      left: 0;
+
+      @include vp-1199 {
+        left: -28px;
+      }
+
+      @include vp-767 {
+        left: -17px;
+      }
+    }
+
+    &--reviews {
+      left: 20%;
+
+      @include vp-1199 {
+        left: -27px;
+      }
+
+      @include vp-767 {
+        left: -10px;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    &--coaches {
+      right: 0;
+
+      @include vp-1199 {
+        right: -28px;
+      }
+
+      @include vp-767 {
+        right: -17px;
+      }
+    }
+
+    &--reviews {
+      right: 20%;
+
+      @include vp-1199 {
+        right: -27px;
+      }
+
+      @include vp-767 {
+        right: -10px;
+      }
+    }
+  }
+
+  .swiper-button {
+    &.swiper-button-disabled {
+      opacity: 0.3;
+    }
+  }
+}

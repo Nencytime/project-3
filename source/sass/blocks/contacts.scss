@@ -1,0 +1,135 @@
+.contacts {
+  padding-top: 56px;
+  padding-bottom: 66px;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 63px 88px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    padding: 63px 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    top: 0;
+    background-color: $color-light-slate-grey;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0 0 37px 17px;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      text-align: start;
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 0 30px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 34px;
+    }
+  }
+}
+
+.contacts__list {
+  width: fit-content;
+  position: relative;
+  padding: 0;
+  margin: 0 0 0 20px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 122px;
+
+  @include vp-1199 {
+    margin: 0;
+    gap: 20px 97px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 90%;
+    width: 1px;
+    background-color: $color-light-slate-grey;
+    left: 53%;
+    top: 6%;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contacts__item {
+  dl {
+    margin: 0;
+  }
+
+  dt {
+    margin: 0 0 3px;
+    font-weight: 700;
+    font-size: 16px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 150%;
+      margin: 0 0 6px;
+    }
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &:nth-of-type(2n) {
+    @include vp-767 {
+      order: 2;
+    }
+  }
+
+  &:nth-of-type(3n) {
+    @include vp-767 {
+      order: 1;
+    }
+  }
+
+  &:nth-of-type(4n) {
+    @include vp-767 {
+      order: 3;
+    }
+  }
+}

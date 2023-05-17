@@ -15,9 +15,10 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  line-height: 150%;
+  font-family: $ff-roboto;
+  color: $color-sapphire;
+  overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +38,12 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 img,

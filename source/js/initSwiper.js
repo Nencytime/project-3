@@ -31,6 +31,7 @@ const initSwiper = new Swiper('.swiper-container', {
 const initSwiperReviews = new Swiper('.swiper-container--reviews', {
   slidesPerView: 1,
   grabCursor: true,
+  initialSlide: 1,
 
   navigation: {
     nextEl: '.swiper-button-next--reviews',

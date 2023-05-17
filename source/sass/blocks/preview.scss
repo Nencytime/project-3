@@ -155,11 +155,11 @@
   height: 100%;
   background-color: $color-egyptian-blue;
   border: none;
-  background-image: url("../img/preview-video.jpg");
+  background-image: url("../img/preview-video.webp");
   transition: opacity $trans-default;
 
   @include retina {
-    background-image: url("../img/preview-video@2x.jpg");
+    background-image: url("../img/preview-video@2x.webp");
   }
 
   @include vp-767 {

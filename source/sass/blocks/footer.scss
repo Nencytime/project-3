@@ -5,12 +5,12 @@
 
   @include vp-1199 {
     padding-top: 47px;
-    padding-bottom: 49px;
+    padding-bottom: 35px;
   }
 
   @include vp-767 {
     padding-top: 50px;
-    padding-bottom: 48px;
+    padding-bottom: 19px;
     margin-left: -33px;
   }
 }
@@ -28,7 +28,7 @@
 .footer__list {
   position: relative;
   padding: 0;
-  margin: -3px 0 0 61px;
+  margin: -3px 0 0 32px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;

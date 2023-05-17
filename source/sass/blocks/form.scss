@@ -2,6 +2,13 @@
   padding-top: 56px;
   padding-bottom: 66px;
   color: $color-default-white;
+  width: 682px;
+  margin-left: auto;
+
+  @include vp-1279 {
+    width: auto;
+    margin-left: 0;
+  }
 
   @include vp-1199 {
     background-color: $color-sapphire;

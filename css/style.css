@@ -1526,6 +1526,15 @@ button,
   border-image-slice: 1;
 }
 
+.title {
+  padding: 0;
+  font-family: "Alumnisans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -1632,18 +1641,6 @@ button,
   margin-right: 49px;
 }
 
-h1 {
-  padding: 0;
-  margin: 0;
-  font-weight: 600;
-  font-size: 92px;
-  line-height: 110px;
-  text-align: right;
-  letter-spacing: 0.05em;
-  -webkit-text-stroke: 4px #ffffff;
-  text-transform: uppercase;
-}
-
 .header__title {
   margin: 15px 0 50px;
   display: -webkit-box;
@@ -1655,7 +1652,21 @@ h1 {
   align-items: flex-end;
 }
 
-.header__title p {
+.header__title h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 92px;
+  line-height: 110px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  -webkit-text-stroke: 4px #ffffff;
+  text-transform: uppercase;
+  max-width: 248px;
+}
+
+.header__compound {
+  list-style-type: none;
   padding: 0;
   margin: 0 0 35px;
   text-align: end;
@@ -1770,13 +1781,9 @@ h1 {
 }
 
 .preview__wrapper h2 {
-  padding: 0;
   margin: 0 0 6px;
-  font-family: "Alumnisans", "Arial", sans-serif;
-  font-weight: 600;
   font-size: 48px;
   line-height: 58px;
-  letter-spacing: 0.03em;
 }
 
 .preview__wrapper h3 {
@@ -1857,13 +1864,7 @@ h1 {
 }
 
 .coaches h2 {
-  padding: 0;
   margin: 0 0 48px;
-  font-family: "Alumnisans", "Arial", sans-serif;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
 }
 
 .coaches__list {
@@ -1879,7 +1880,15 @@ h1 {
   position: relative;
 }
 
-.coaches__item .coaches__item-title {
+.coaches__item.focus-visible:focus .coaches__info {
+  display: block;
+}
+
+.coaches__item.focus-visible:focus .coaches__item-title {
+  display: none;
+}
+
+.coaches__item-title {
   padding: 0;
   margin: 0;
   font-weight: 700;
@@ -1891,14 +1900,6 @@ h1 {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   color: #ffffff;
-}
-
-.coaches__item.focus-visible:focus .coaches__info {
-  display: block;
-}
-
-.coaches__item.focus-visible:focus .coaches__item-title {
-  display: none;
 }
 
 .coaches__photo img {
@@ -2160,13 +2161,7 @@ h1 {
 }
 
 .advantages h2 {
-  padding: 0;
   margin: 0 0 52px 10px;
-  font-family: "Alumnisans", "Arial", sans-serif;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -2303,13 +2298,7 @@ h1 {
 
 .reviews h2 {
   text-align: center;
-  padding: 0;
   margin: 0 0 37px 10px;
-  font-family: "Alumnisans", "Arial", sans-serif;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
 }
 
 .reviews__container {
@@ -2377,24 +2366,18 @@ h1 {
   z-index: -1;
   position: absolute;
   content: "";
-  background-image: url("../img/wheels.png");
+  background-image: url("../img/wheels-desktop.webp");
   background-color: rgba(255, 255, 255, 0);
-  width: 470px;
+  width: 287px;
   height: 494px;
-  bottom: -149px;
-  right: -183px;
+  bottom: -150px;
+  right: 0;
   background-size: cover;
 }
 
 .subscriptions__container h2 {
-  padding: 0;
-  margin: 0 0 7px -5px;
-  font-family: "Alumnisans", "Arial", sans-serif;
   text-align: center;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
+  margin: 0 0 7px -5px;
 }
 
 .subscriptions__list {
@@ -2463,19 +2446,29 @@ h1 {
 
 .subscriptions__price {
   position: relative;
-  margin-bottom: 30px;
-}
-
-.subscriptions__price span {
-  position: relative;
   font-weight: 700;
   font-size: 60px;
   z-index: 1;
-  margin: 0 0 0 -30px;
+  margin: 0 0 30px -30px;
   color: #103aae;
 }
 
-.subscriptions__price span::after {
+.subscriptions__price::before {
+  content: attr(data-price);
+  position: absolute;
+  top: -22px;
+  z-index: -1;
+  left: 60%;
+  font-size: 100px;
+  font-weight: 700;
+  color: rgba(232, 232, 232, 0.48);
+  overflow-wrap: normal;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.subscriptions__price::after {
   position: absolute;
   content: "";
   right: -30px;
@@ -2486,20 +2479,6 @@ h1 {
   background-image: url("../img/svg/icon-ruble.svg");
   width: 30px;
   height: 42px;
-}
-
-.subscriptions__price .subscriptions__decor {
-  position: absolute;
-  top: -22px;
-  z-index: 0;
-  left: 50%;
-  font-size: 100px;
-  font-weight: 700;
-  color: rgba(232, 232, 232, 0.48);
-  overflow-wrap: normal;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .subscriptions__button {
@@ -2525,13 +2504,7 @@ h1 {
 }
 
 .benefits h2 {
-  font-family: "Alumnisans", "Arial", sans-serif;
-  padding: 0;
   margin: 0 0 34px;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -2677,13 +2650,9 @@ h1 {
 }
 
 .form h2 {
-  padding: 0;
   margin: 0 0 5px;
-  font-family: "Alumnisans", "Arial", sans-serif;
   font-weight: 800;
-  font-size: 54px;
   line-height: 156%;
-  letter-spacing: 0.03em;
 }
 
 .form__container {
@@ -2766,13 +2735,7 @@ h1 {
 }
 
 .contacts h2 {
-  padding: 0;
   margin: 0 0 37px 17px;
-  font-family: "Alumnisans", "Arial", sans-serif;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 65px;
-  letter-spacing: 0.03em;
 }
 
 .contacts__list {
@@ -2800,17 +2763,15 @@ h1 {
   top: 6%;
 }
 
-.contacts__item dl {
-  margin: 0;
-}
-
-.contacts__item dt {
+.contacts__item h3 {
   margin: 0 0 3px;
+  padding: 0;
   font-weight: 700;
   font-size: 16px;
 }
 
-.contacts__item dd {
+.contacts__item p {
+  padding: 0;
   margin: 0;
   font-weight: 400;
   font-size: 14px;
@@ -2936,6 +2897,11 @@ h1 {
 }
 
 @media (max-width: 1199px) {
+  .title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
   .container {
     padding: 0 45px;
   }
@@ -2979,18 +2945,18 @@ h1 {
     margin-right: 3px;
   }
 
-  h1 {
+  .header__title {
+    margin: 9px 0 36px;
+  }
+
+  .header__title h1 {
     font-size: 72px;
     line-height: 86px;
     letter-spacing: 0.05em;
     text-transform: none;
   }
 
-  .header__title {
-    margin: 9px 0 36px;
-  }
-
-  .header__title p {
+  .header__compound {
     font-size: 14px;
     line-height: 150%;
     margin: 0 9px 21px 0;
@@ -3104,8 +3070,6 @@ h1 {
   }
 
   .coaches h2 {
-    font-size: 42px;
-    line-height: 50px;
     text-align: center;
     margin: 0 0 31px -5px;
   }
@@ -3191,8 +3155,6 @@ h1 {
   }
 
   .advantages h2 {
-    font-size: 42px;
-    line-height: 50px;
     margin: 0 0 42px -22px;
   }
 
@@ -3254,8 +3216,6 @@ h1 {
   }
 
   .reviews h2 {
-    font-size: 42px;
-    line-height: 50px;
     margin: 0 0 40px -2px;
   }
 
@@ -3270,15 +3230,13 @@ h1 {
   }
 
   .subscriptions::after {
-    right: -73px;
     bottom: -125px;
-    width: 420px;
+    width: 347px;
     height: 444px;
+    background-image: url("../img/wheels-tablet.png");
   }
 
   .subscriptions__container h2 {
-    font-size: 42px;
-    line-height: 50px;
     margin: 0 0 10px -14px;
   }
 
@@ -3316,8 +3274,6 @@ h1 {
   }
 
   .benefits h2 {
-    font-size: 42px;
-    line-height: 50px;
     margin: 0 0 41px -8px;
   }
 
@@ -3345,10 +3301,9 @@ h1 {
 
   .form h2 {
     text-align: start;
-    font-size: 42px;
-    line-height: 50px;
-    font-weight: 700;
     margin: 0 0 22px;
+    font-weight: 700;
+    line-height: 50px;
   }
 
   .form__container {
@@ -3376,8 +3331,6 @@ h1 {
 
   .contacts h2 {
     text-align: start;
-    font-size: 42px;
-    line-height: 50px;
     margin: 0 0 30px;
   }
 
@@ -3390,13 +3343,13 @@ h1 {
     left: 53%;
   }
 
-  .contacts__item dt {
+  .contacts__item h3 {
     font-size: 20px;
     line-height: 150%;
     margin: 0 0 6px;
   }
 
-  .contacts__item dd {
+  .contacts__item p {
     font-size: 18px;
     line-height: 27px;
   }
@@ -3432,7 +3385,18 @@ h1 {
   }
 }
 
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .subscriptions::after {
+    background-image: url("../img/wheels-tablet@2x.png");
+  }
+}
+
 @media (max-width: 767px) {
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
   .container {
     padding: 0 15px;
   }
@@ -3477,10 +3441,6 @@ h1 {
     line-height: 34px;
   }
 
-  h1 br {
-    display: none;
-  }
-
   .header__title {
     margin: 15px 0 22px;
     gap: 0;
@@ -3493,7 +3453,7 @@ h1 {
     justify-content: space-between;
   }
 
-  .header__title p {
+  .header__compound {
     -ms-flex-item-align: end;
     align-self: flex-end;
     margin: 0 -8px 33px 0;
@@ -3606,8 +3566,6 @@ h1 {
   }
 
   .coaches h2 {
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 42px -5px;
   }
 
@@ -3672,8 +3630,6 @@ h1 {
   }
 
   .advantages h2 {
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 42px -17px;
   }
 
@@ -3740,8 +3696,6 @@ h1 {
   }
 
   .reviews h2 {
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 42px -2px;
   }
 
@@ -3788,8 +3742,6 @@ h1 {
   }
 
   .subscriptions__container h2 {
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 11px -10px;
   }
 
@@ -3814,20 +3766,20 @@ h1 {
     margin: 0 0 80px;
   }
 
-  .subscriptions__price span {
+  .subscriptions__price {
     font-size: 48px;
     margin: 0 0 0 -20px;
   }
 
-  .subscriptions__price span::after {
+  .subscriptions__price::before {
+    font-size: 80px;
+  }
+
+  .subscriptions__price::after {
     width: 24px;
     height: 33px;
     background-size: 24px 33px;
     right: -24px;
-  }
-
-  .subscriptions__price .subscriptions__decor {
-    font-size: 80px;
   }
 
   .subscriptions__button {
@@ -3840,8 +3792,6 @@ h1 {
   }
 
   .benefits h2 {
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 42px -5px;
   }
 
@@ -3923,9 +3873,8 @@ h1 {
 
   .form h2 {
     font-weight: 600;
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 25px;
+    line-height: 38px;
   }
 
   .form__container {
@@ -3951,8 +3900,6 @@ h1 {
   }
 
   .contacts h2 {
-    font-size: 32px;
-    line-height: 38px;
     margin: 0 0 34px;
   }
 
@@ -4089,6 +4036,6 @@ h1 {
   }
 
   .subscriptions::after {
-    background-image: url("../img/wheels@2x.png");
+    background-image: url("../img/wheels-desktop@2x.webp");
   }
 }

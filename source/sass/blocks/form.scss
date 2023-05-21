@@ -22,27 +22,21 @@
   }
 
   h2 {
-    padding: 0;
     margin: 0 0 5px;
-    font-family: $ff-alumni;
     font-weight: 800;
-    font-size: 54px;
     line-height: 156%;
-    letter-spacing: 0.03em;
 
     @include vp-1199 {
       text-align: start;
-      font-size: 42px;
-      line-height: 50px;
-      font-weight: 700;
       margin: 0 0 22px;
+      font-weight: 700;
+      line-height: 50px;
     }
 
     @include vp-767 {
       font-weight: 600;
-      font-size: 32px;
-      line-height: 38px;
       margin: 0 0 25px;
+      line-height: 38px;
     }
   }
 }

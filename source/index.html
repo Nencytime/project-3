@@ -11,18 +11,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="fonts/alumnisans-normal-600.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/alumnisans-normal-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/alumnisans-normal-700.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/alumnisans-normal-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/alumnisans-normal-800.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/alumnisans-normal-800.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/robotocondensed-normal-300.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/robotocondensed-normal-300.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/robotocondensed-normal-400.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/robotocondensed-normal-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/robotocondensed-normal-700.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/robotocondensed-normal-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/alumnisans-normal-600.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/alumnisans-normal-600.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/alumnisans-normal-700.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/alumnisans-normal-700.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/alumnisans-normal-800.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/alumnisans-normal-800.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/robotocondensed-normal-300.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/robotocondensed-normal-300.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/robotocondensed-normal-400.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/robotocondensed-normal-400.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/robotocondensed-normal-700.woff" as="font" type="font/woff">
+    <link rel="preload" href="fonts/robotocondensed-normal-700.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -46,8 +46,18 @@
               <div class="header__text">
                 <span>омск</span>
                 <div class="header__title">
-                  <p>Тренажёрный&nbsp;зал<br>Групповые&nbsp;занятия<br>Кардио-зона</p>
-                  <h1>Фитнес<br> &nbsp;центр</h1>
+                  <ul class="header__compound">
+                    <li>
+                      Тренажёрный&nbsp;зал
+                    </li>
+                    <li>
+                      Групповые&nbsp;занятия
+                    </li>
+                    <li>
+                      Кардио-зона
+                    </li>
+                  </ul>
+                  <h1>Фитнес &nbsp;центр</h1>
                 </div>
                 <a class="header__button btn" href="#subscriptions">Купить абонемент</a>
               </div>
@@ -72,7 +82,7 @@
           <div class="container">
             <div class="preview__container">
               <div class="preview__wrapper">
-                <h2>Тренажерный зал</h2>
+                <h2 class="title">Тренажерный зал</h2>
                 <h3>Просторный зал площадью 900 кв/м</h3>
                 <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
                 <p>В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
@@ -105,7 +115,7 @@
         <section class="subscriptions" id="subscriptions">
           <div class="container">
             <div class="subscriptions__container">
-              <h2>Абонементы</h2>
+              <h2 class="title">Абонементы</h2>
               <div class="tabs">
                 <ul class="tabs__header">
                   <li>
@@ -124,28 +134,19 @@
                       <li class="subscriptions__item" tabindex="0">
                         <h3>С&nbsp;тренером</h3>
                         <p>12 занятий</p>
-                        <div class="subscriptions__price">
-                          <span>5000&nbsp;</span>
-                          <div class="subscriptions__decor">5000</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="5000">5000&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="subscriptions__item" tabindex="0">
                         <h3>Дневной</h3>
                         <p>с&nbsp;8:00 до&nbsp;17:00</p>
-                        <div class="subscriptions__price">
-                          <span>1700&nbsp;</span>
-                          <div class="subscriptions__decor">1700</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="1700">1700&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="subscriptions__item" tabindex="0">
                         <h3>Полный день</h3>
                         <p>с&nbsp;8:00 до&nbsp;22:00</p>
-                        <div class="subscriptions__price">
-                          <span>2700&nbsp;</span>
-                          <div class="subscriptions__decor">2700</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="2700">2700&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                     </ul>
@@ -155,28 +156,19 @@
                       <li class="subscriptions__item" tabindex="0">
                         <h3>С&nbsp;тренером</h3>
                         <p>72 занятий</p>
-                        <div class="subscriptions__price">
-                          <span>25000&nbsp;</span>
-                          <div class="subscriptions__decor">25000</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="25000">25000&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="subscriptions__item" tabindex="0">
                         <h3>Дневной</h3>
                         <p>с&nbsp;8:00 до&nbsp;17:00</p>
-                        <div class="subscriptions__price">
-                          <span>5100&nbsp;</span>
-                          <div class="subscriptions__decor">5100</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="5100">5100&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="subscriptions__item" tabindex="0">
                         <h3>Полный день</h3>
                         <p>с&nbsp;8:00 до&nbsp;22:00</p>
-                        <div class="subscriptions__price">
-                          <span>8100&nbsp;</span>
-                          <div class="subscriptions__decor">8100</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="8100">8100&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                     </ul>
@@ -186,28 +178,19 @@
                       <li class="subscriptions__item" tabindex="0">
                         <h3>С&nbsp;тренером</h3>
                         <p>144 занятий</p>
-                        <div class="subscriptions__price">
-                          <span>45000&nbsp;</span>
-                          <div class="subscriptions__decor">45000</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="45000">45000&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="subscriptions__item" tabindex="0">
                         <h3>Дневной</h3>
                         <p>с&nbsp;8:00 до&nbsp;17:00</p>
-                        <div class="subscriptions__price">
-                          <span>15300&nbsp;</span>
-                          <div class="subscriptions__decor">15300</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="15300">15300&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                       <li class="subscriptions__item" tabindex="0">
                         <h3>Полный день</h3>
                         <p>с&nbsp;8:00 до&nbsp;22:00</p>
-                        <div class="subscriptions__price">
-                          <span>24300&nbsp;</span>
-                          <div class="subscriptions__decor">24300</div>
-                        </div>
+                        <div class="subscriptions__price" data-price="24300">24300&nbsp;</div>
                         <a class="subscriptions__button btn" href="#">Купить абонемент</a>
                       </li>
                     </ul>
@@ -259,7 +242,7 @@
 
         <section class="coaches" id="coaches">
           <div class="container">
-            <h2>Тренеры</h2>
+            <h2 class="title">Тренеры</h2>
             <div class="coaches__container">
                 <div class="swiper-container swiper-container--coaches">
                   <ul class="coaches__list swiper-wrapper swiper-wrapper--coaches">
@@ -421,7 +404,7 @@
 
         <section class="advantages">
           <div class="container">
-            <h2>Наши преимущества</h2>
+            <h2 class="title">Наши преимущества</h2>
             <div class="advantages__container">
               <ul class="advantages__list">
                 <li class="advantages__item">
@@ -478,7 +461,7 @@
 
         <section class="benefits" id="benefits">
           <div class="container">
-            <h2>Акции</h2>
+            <h2 class="title">Акции</h2>
             <div class="benefits__container">
               <ul class="benefits__list">
                 <li class="benefits__item benefits__item--special">
@@ -518,7 +501,7 @@
 
         <section class="reviews">
           <div class="container">
-            <h2>Отзывы</h2>
+            <h2 class="title">Отзывы</h2>
             <div class="reviews__container">
               <div class="swiper">
                 <div class="swiper-container swiper-container--reviews">
@@ -570,7 +553,7 @@
 
           <section class="form">
             <div class="container">
-              <h2>Бесплатное занятие</h2>
+              <h2 class="title">Бесплатное занятие</h2>
               <div class="form__container">
                 <form class="form__post" action="https://echo.htmlacademy.ru/" method="post">
                   <div class="form__block">
@@ -597,32 +580,24 @@
 
           <section class="contacts">
             <div class="container">
-              <h2>Контакты</h2>
+              <h2 class="title">Контакты</h2>
               <div class="contacts__container">
                 <ul class="contacts__list">
                   <li class="contacts__item">
-                    <dl>
-                      <dt>Адрес:</dt>
-                      <dd>г.&nbsp;Омск,&nbsp;ул.&nbsp;60&nbsp;лет&nbsp;Октября,&nbsp;7</dd>
-                    </dl>
+                    <h3>Адрес:</h3>
+                    <p>г.&nbsp;Омск,&nbsp;ул.&nbsp;60&nbsp;лет&nbsp;Октября,&nbsp;7</p>
                   </li>
                   <li class="contacts__item">
-                    <dl>
-                      <dt>Телефон:</dt>
-                      <dd>8-800-555-55-55</dd>
-                    </dl>
+                    <h3>Телефон:</h3>
+                    <p>8-800-555-55-55</p>
                   </li>
                   <li class="contacts__item">
-                    <dl>
-                      <dt>График работы:</dt>
-                      <dd>Пн-Вс: с 8:00 до 22:00</dd>
-                    </dl>
+                    <h3>График работы:</h3>
+                    <p>Пн-Вс: с 8:00 до 22:00</p>
                   </li>
                   <li class="contacts__item">
-                    <dl>
-                      <dt>Email:</dt>
-                      <dd>omsk@supergym.ru</dd>
-                    </dl>
+                    <h3>Email:</h3>
+                    <p>omsk@supergym.ru</p>
                   </li>
                 </ul>
               </div>

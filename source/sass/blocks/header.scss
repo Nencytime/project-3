@@ -126,7 +126,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 16px;
-  align-items: center;
+  align-items: self-start;
 
   @include vp-1199 {
     margin: 9px 0 36px;
@@ -164,27 +164,25 @@
     @include vp-767 {
       margin: 0 0 22px;
       max-width: none;
+      min-height: 140px;
     }
   }
-}
-
-.header__title-block {
-  align-self: flex-start;
 }
 
 .header__compound {
   list-style-type: none;
   padding: 0;
-  margin: 53px 0 0;
+  margin: 122px 0 0;
   text-align: end;
   font-family: $ff-roboto;
   font-size: 14px;
   line-height: 21px;
+  grid-row: 1 / 3;
 
   @include vp-1199 {
     font-size: 14px;
     line-height: 150%;
-    margin: 45px 9px 0 0;
+    margin: 88px 9px 0 0;
   }
 
   @include vp-767 {
@@ -209,7 +207,6 @@
 }
 
 .header__button {
-  grid-column: 2 / 3;
   padding: 19px;
   min-width: 234px;
   margin: 0 0 15px 15px;
@@ -223,6 +220,9 @@
   }
 
   @include vp-767 {
-    grid-column: 1 / 3;
+    grid-column: 1/3;
+    min-width: 100%;
+    //min-width: calc(100% + 106px);
+    //margin-left: -106px;
   }
 }

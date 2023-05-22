@@ -131,7 +131,7 @@
   }
 
   @include vp-767 {
-    width: calc(100% + 30px);
+    width: calc(100% + 15px);
     margin-top: 40px;
     margin-left: -15px;
     margin-right: -15px;
@@ -182,6 +182,10 @@
       width: 73px;
       height: 73px;
       background-size: 73px 73px;
+    }
+
+    @include vp-767 {
+      left: 52.5%;
     }
   }
 

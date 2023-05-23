@@ -1647,6 +1647,8 @@ button,
   display: grid;
   -ms-grid-columns: auto 1fr;
   grid-template-columns: auto 1fr;
+  -ms-grid-rows: auto 1fr;
+  grid-template-rows: auto 1fr;
   gap: 16px;
   -webkit-box-align: self-start;
   -ms-flex-align: self-start;
@@ -3466,7 +3468,7 @@ button,
   }
 
   .header__compound {
-    margin: 76px -8px 0 0;
+    margin: 76px -8px 20px 0;
   }
 
   .header__img {

@@ -125,6 +125,7 @@
   margin: 15px 0 50px;
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
   gap: 16px;
   align-items: self-start;
 
@@ -186,7 +187,7 @@
   }
 
   @include vp-767 {
-    margin: 76px -8px 0 0;
+    margin: 76px -8px 20px 0;
   }
 }
 

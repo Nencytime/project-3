@@ -1,10 +1,10 @@
 .contacts {
   padding-top: 56px;
-  padding-bottom: 66px;
+  padding-bottom: 46px;
   position: relative;
 
   @include vp-1199 {
-    padding: 63px 88px;
+    padding: 63px 88px 48px;
     margin-left: 0;
   }
 
@@ -43,10 +43,11 @@
   width: fit-content;
   position: relative;
   padding: 0;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 21px;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  column-count: 2;
+  //display: grid;
+  //grid-template-columns: repeat(2, 1fr);
   gap: 17px 122px;
 
   @include vp-1199 {
@@ -64,15 +65,11 @@
   &::after {
     position: absolute;
     content: "";
-    height: 90%;
+    height: 76%;
     width: 1px;
     background-color: $color-light-slate-grey;
     left: 50%;
     top: 6%;
-
-    @include vp-1199 {
-      left: 53%;
-    }
 
     @include vp-767 {
       display: none;
@@ -81,6 +78,12 @@
 }
 
 .contacts__item {
+  margin-bottom: 17px;
+
+  @include vp-767 {
+    margin: 0;
+  }
+
   h3 {
     margin: 0 0 3px;
     padding: 0;
@@ -94,12 +97,14 @@
     }
   }
 
-  p {
+  p,
+  .contacts__link {
     padding: 0;
     margin: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    color: $color-sapphire;
 
     @include vp-1199 {
       font-size: 18px;
@@ -107,7 +112,7 @@
     }
   }
 
-  &:nth-of-type(2n) {
+  /* &:nth-of-type(2n) {
     @include vp-767 {
       order: 2;
     }
@@ -123,5 +128,5 @@
     @include vp-767 {
       order: 3;
     }
-  }
+  } */
 }

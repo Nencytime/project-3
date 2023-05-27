@@ -21,7 +21,9 @@
 .header__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
 
   @include vp-1199 {
     align-items: baseline;

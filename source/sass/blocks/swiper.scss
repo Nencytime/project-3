@@ -8,16 +8,14 @@
 
 .swiper-container {
   position: relative;
-  padding: 0 60px;
 
   &--coaches {
-    width: calc(100% + 120px);
-    margin: 0 0 0 -60px;
+    width: 100%;
 
     @include vp-1199 {
       width: 100%;
       margin: 0;
-      padding: 0 63px;
+      padding: 0 35px;
     }
 
     @include vp-767 {
@@ -40,15 +38,15 @@
 
   .swiper-slide {
     min-height: 294px;
-    min-width: 260px;
-    width: calc((100% - 120px) / 4);
-
-    @include vp-1279 {
-      width: calc((100% - 120px) / 3);
-    }
+    min-width: 220px;
+    width: calc(100% / 4);
 
     @include vp-1199 {
-      width: 268px;
+      min-width: 248px;
+    }
+
+    @include vp-1023 {
+      min-width: 238px;
     }
 
     @include vp-767 {
@@ -69,58 +67,38 @@
 }
 
 .swiper-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  &--reviews {
+    top: 0;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 22px;
-
-    width: 24px;
-    height: 100%;
-
-    color: $color-dark-gray;
-
+    z-index: 5;
     background-color: $color-default-white;
     border: none;
 
-    @include vp-1199 {
-      width: 70px;
-    }
-
-    @include vp-767 {
-      width: 50px;
-    }
-
-    &::after {
-      font-size: 30px;
-
-      @include vp-767 {
-        font-size: 24px;
-      }
-    }
-
     &--reviews {
+      top: 120px;
       background-color: $color-transparent;
       width: 40px;
 
+      @include vp-1199 {
+        width: 70px;
+      }
+
       @include vp-767 {
+        top: 165px;
         width: 35px;
       }
     }
   }
 
   .swiper-button-prev {
-    &--coaches {
-      left: 0;
-
-      @include vp-1199 {
-        left: -28px;
-      }
-
-      @include vp-767 {
-        left: -17px;
-      }
-    }
-
     &--reviews {
       left: 20%;
 
@@ -135,18 +113,6 @@
   }
 
   .swiper-button-next {
-    &--coaches {
-      right: 0;
-
-      @include vp-1199 {
-        right: -28px;
-      }
-
-      @include vp-767 {
-        right: -17px;
-      }
-    }
-
     &--reviews {
       right: 20%;
 

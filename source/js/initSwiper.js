@@ -3,11 +3,10 @@ import './vendor/swiper.js'
 const initSwiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   loop: true,
+  slidesPerView: 1,
+  initialSlide: 2,
+  spaceBetween: 30,
   breakpoints: {
-    0: {
-      slidesPerView: 1,
-      initialSlide: 2
-  },
     768: {
         slidesPerView: 2,
         spaceBetween: 30,
@@ -19,7 +18,8 @@ const initSwiper = new Swiper('.swiper-container', {
     },
     1280: {
         slidesPerView: 4,
-        spaceBetween: 40
+        spaceBetween: 40,
+        initialSlide: 4
     }
   },
   navigation: {

@@ -1,5 +1,5 @@
 .header {
-  padding-top: 30px;
+  padding-top: 38px;
   padding-bottom: 29px;
   background: $gradient;
   color: $color-default-white;
@@ -24,6 +24,7 @@
   gap: 20px;
   position: relative;
   z-index: 1;
+  justify-content: space-between;
 
   @include vp-1199 {
     align-items: baseline;
@@ -46,33 +47,37 @@
       height: 24px;
     }
   }
+}
 
-  .header__tel {
+.header__tel-wrapper {
+  max-width: 80%;
+}
+
+.header__tel {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+  margin-left: 10px;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 600;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.03em;
-    color: $color-default-white;
-    margin-left: auto;
-
-    @include vp-1199 {
-      font-size: 24px;
-      line-height: 29px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    @include vp-767 {
-      font-size: 20px;
-      line-height: 24px;
-      font-weight: 600;
-    }
   }
 }
 
 .header__block {
   display: flex;
-  margin: -2.7% 0 0 19px;
+  margin: -3.5% 0 0 19px;
 
   @include vp-1199 {
     margin: 0;
@@ -85,7 +90,7 @@
 }
 
 .header__text {
-  margin-top: 110px;
+  margin-top: 130px;
   margin-right: 65px;
   display: flex;
   flex-direction: column;
@@ -194,8 +199,13 @@
 }
 
 .header__img {
+  align-self: center;
+  width: 44%;
+
   @include vp-1199 {
     margin-top: 17px;
+    width: 100%;
+    align-self: auto;
   }
 
   @include vp-767 {
